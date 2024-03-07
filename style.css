@@ -1,36 +1,90 @@
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
+  min-height: 100vh;
+  width: 100vw;
   overflow: hidden;
-  height: 100vh;
-}
-#container {
+  margin: 0;
+  background-color: #d5ddf1;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  overflow-y: scroll;
+  font-family: game-font;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+}
+@font-face {
+  font-family: "game-font";
+  src: url("circular-std-medium-500.ttf");
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #93a3cb;
+}
+#game {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  height: 630px;
-  max-width: 630px;
-  font-size: 85px;
-  color: white;
-  gap: 10px;
-  display: none;
+  justify-content: space-evenly;
+  row-gap: 35px;
+  margin: 80px;
+  /* border: 1px solid black; */
 }
-.box {
-  height: 200px;
-  min-width: 200px;
-  background-color: #121212;
-}
-#timer {
-  height: 630px;
-  width: 630px;
+
+.gameContainer {
+  height: 280px;
+  width: 430px;
   display: flex;
-  font-size: 85px;
-  transform: scale(1.5);
-  color: white;
+  position: relative;
   justify-content: center;
   align-items: center;
+  background-color: #93a3cb;
+  border-radius: 25px;
+  object-fit: contain;
+  transition: 0.5s all ease-in-out;
+
+  box-shadow: #aab9df 0px 20px 30px -10px;
+  /* border: 1px solid black; */
+  /* box-shadow: #000000 5px 5px 15px; */
+}
+.gameContainer img {
+  border-radius: 25px;
+  height: 100%;
+  width: 430px;
+  transition: 0.3s all ease-in-out;
+}
+.gameContainer img:hover {
+  scale: 1.2;
+}
+.gameContainer:hover {
+  scale: 1.05;
+}
+.gameContainer span {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: 0.3s all ease-out;
+  text-decoration: none;
+  color: black;
+}
+
+.gameContainer:hover span {
+  opacity: 1;
+  bottom: -10%;
+}
+.overflow {
+  overflow: visible;
+}
+.overflowHidden {
+  overflow: hidden;
 }

@@ -3,7 +3,7 @@ function startGame() {
   let timer = document.getElementById("timer");
 
   let intervalId = setInterval(() => {
-    let scaleFactor = 1 + (1 * (3 - j)) / 3;
+    let scaleFactor = 1 + (6 * (3 - j)) / 3;
     timer.style.transform = `scale(${scaleFactor})`;
     timer.innerText = j;
     j--;
@@ -25,6 +25,7 @@ startGame();
 function game() {
   i = 0;
   let clicks = 0;
+  let correct = 0;
   let guess = [];
   let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let shuffledRandom = shuffle(num);
@@ -60,14 +61,15 @@ function game() {
         guess.push(id);
         if (id === shuffledRandom[i]) {
           let div = document.getElementById(shuffledRandom[i]);
-          div.style.backgroundColor = "green";
+          div.style.backgroundColor = "#9BFB08";
           // console.log("right");
+          correct++;
         } else {
           let rightdiv = document.getElementById(shuffledRandom[i]);
           // console.log(shuffledRandom[i]);
           rightdiv.style.transform = "rotate(360deg)";
           let wrongdiv = document.getElementById(this.id);
-          wrongdiv.style.backgroundColor = "red";
+          wrongdiv.style.backgroundColor = "#FF0808";
           // console.log("wrong");
         }
         if (clicks == 9) {
@@ -81,7 +83,8 @@ function game() {
             } else {
               // console.log(guess);
               // console.log(shuffledRandom);
-              container.innerText = "you loose";
+              container.innerText =
+                "you loose, " + correct + " out of 9 were right";
             }
           }, 500);
         }

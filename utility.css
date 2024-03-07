@@ -1,0 +1,210 @@
+#rotating-section {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+  scale: 1;
+}
+.rect1,
+.rect2,
+.rect3,
+.rect4 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: -150px;
+  background: #6b7ca8;
+  animation: mymove2 4s linear infinite;
+  scale: 0.5;
+}
+
+.rect1 {
+  left: 50%;
+}
+.rect2 {
+  left: 10%;
+  animation-delay: 0.3s;
+}
+.rect3 {
+  left: 25%;
+  animation-delay: 2s;
+}
+.rect4 {
+  left: 85%;
+  animation-delay: 1s;
+}
+
+.rect5,
+.rect6,
+.rect7,
+.rect8 {
+  position: absolute;
+  width: 50px;
+  scale: 0.5;
+  height: 50px;
+  background: rgb(131, 149, 192);
+  bottom: -150px;
+  animation: mymove2 4s linear infinite;
+}
+
+.rect5 {
+  left: 0%;
+}
+.rect6 {
+  left: 15%;
+  animation-delay: 2.2s;
+}
+.rect7 {
+  left: 45%;
+  animation-delay: 0.8s;
+}
+.rect8 {
+  left: 77%;
+  animation-delay: 1.4s;
+}
+
+.rect9,
+.rect10,
+.rect21 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #b8c4e1;
+  scale: 0.3;
+  bottom: -250px;
+  border-radius: 50%;
+  animation: mymove3 5s linear infinite;
+}
+.rect21 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #b1c0e6;
+  left: 500px;
+  bottom: 250px;
+  border-radius: 50%;
+  animation: mymove3 5s linear infinite;
+}
+
+.rect9 {
+  left: 3%;
+}
+.rect10 {
+  left: 95%;
+  animation-delay: 0s;
+}
+
+.rect13,
+.rect14 {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: solid 40px transparent;
+  border-bottom: solid 40px #fff;
+  scale: 0.3;
+  bottom: -150px;
+  animation: mymove4 4s linear infinite;
+}
+
+.rect13 {
+  left: 45%;
+  border-bottom: solid 65px #fff;
+  animation-delay: 0.6s;
+}
+.rect14 {
+  left: 72%;
+  border-bottom: solid 120px #fff;
+  animation: mymove5 6s liner infinte;
+  animation-delay: 1s;
+}
+
+.rect11,
+.rect12 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #b1c0e6;
+  scale: 0.3;
+  border: solid 40px transparent;
+  border-bottom: solid 40px #b1c0e6;
+  border-radius: 50%;
+  bottom: -150px;
+  animation: mymove5 4s linear infinite;
+}
+
+.rect11 {
+  right: 15%;
+  bottom: 22%;
+}
+.rect12 {
+  right: 5%;
+  animation-delay: 1.3s;
+}
+
+.rect15 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #b1c0e6;
+  bottom: -400px;
+  animation: mymove3 6s linear infinite;
+  scale: 0.3;
+}
+
+.rect15 {
+  left: 55%;
+}
+@keyframes mymove2 {
+  0% {
+    transform: rortate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(540deg);
+    opacity: 0;
+    bottom: 100vh;
+  }
+}
+
+@keyframes mymove3 {
+  0% {
+    transform: rortate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(720deg);
+    opacity: 0;
+    bottom: 100vh;
+  }
+}
+
+@keyframes mymove4 {
+  0% {
+    transform: rortate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(720deg);
+    opacity: 0;
+    bottom: 100vh;
+  }
+}
+
+@keyframes mymove5 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    bottom: 100vh;
+    rotate: 270deg;
+  }
+}
+
+/* .shadow {
+  box-shadow: #93a3cb 10px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+} */

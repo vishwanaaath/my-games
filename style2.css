@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  /* background-color: black; */
+  background-color: #93a3cb;
+  /* background-color: #d5ddf1; */
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 200px);
+  grid-gap: 10px;
+  height: 620px;
+  /* background-color: black; */
+  background-color: #93a3cb;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  color: white;
+  /* background-color: #121212; */
+  /* background-color: #777575; */
+  background-color: #d5ddf1;
+  font-size: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#win {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 600px;
+  font-size: 120px;
+  display: none;
+  color: white;
+}
+
+/* .highlight {
+    font-size: 156px;
+    transition: font-size 0.5s ease;
+  } */
+/* .highlight {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+  } */
+.highlight {
+  transform: rotateY(360deg);
+  transition: transform 0.5s ease;
+}
+
+.xcolor {
+  color: #fff;
+  background-color: #28a2df;
+}
+.ocolor {
+  background-color: #ffc0cb;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  #container {
+    grid-template-columns: repeat(
+      3,
+      100px
+    ); /* Adjust the number and size of columns */
+    grid-template-rows: repeat(
+      3,
+      100px
+    ); /* Adjust the number and size of rows */
+    height: auto; /* Adjust height as per content */
+  }
+
+  .box {
+    width: 100px; /* Adjust box width */
+    height: 100px; /* Adjust box height */
+    font-size: 80px; /* Adjust font size */
+  }
+  .highlight {
+    font-size: 100px;
+    transition: font-size 0.5s ease;
+  }
+  #win {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+    font-size: 80px;
+    display: none;
+    color: white;
+  }
+}
